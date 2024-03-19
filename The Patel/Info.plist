@@ -2,14 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We need your location to improve your experiance.</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>We need your location to improve your experiance.</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>We need your location to improve your experiance.</string>
-    <key>NSLocationUsageDescription</key>
-    <string>We need your location to improve your experiance.</string>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>We Use Notification to remind you about events</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to improve your experiance.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to improve your experiance.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location to improve your experiance.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>We need your location to improve your experiance.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This will Use For Better Reach</string>
 	<key>UIApplicationSceneManifest</key>
