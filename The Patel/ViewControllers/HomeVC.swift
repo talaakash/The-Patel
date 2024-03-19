@@ -12,6 +12,7 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var birthDate: UILabel!
     var userData: UserProfile?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class HomeVC: UIViewController {
     private func setup(){
         userName.text = "\(userData?.name ?? "") \(userData?.surname ?? "")"
         profilePic.kf.setImage(with: URL(string: userData?.profilepicture ?? ""))
+        birthDate.text = "Born on \(userData?.birthdate ?? "")"
     }
 
     @IBAction func viewProfile(_ sender: UIButton){
