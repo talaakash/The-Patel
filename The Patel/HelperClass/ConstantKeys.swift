@@ -11,6 +11,14 @@ class UserSession{
     static let user = "User"
     static let email = "Email"
     static let userID = "UserId"
+    
+    static let events = "EventsList"
+    static let samajs = "SamjsList"
+    static let locationForSamajs = "SamajsLocation"
+    static let publicDiscussion = "PublicDiscussion"
+    static let reputedPeople = "ReputedPeople"
+    static let messages = "Messages"
+    static let images = "Images"
 }
 
 class ViewControllerKey{

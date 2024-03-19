@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Event{
+class Event: Codable{
     let id: String
     let createDate: String
     let name: String

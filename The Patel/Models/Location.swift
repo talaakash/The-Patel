@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class Location{
+class Location: Codable{
     let name: String
     let street: String
     let locality: String

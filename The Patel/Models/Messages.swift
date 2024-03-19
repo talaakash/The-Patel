@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestoreInternal
 
-class Messages{
+class Messages: Codable{
     let id: String
     let message: String
     let isMessage: Bool

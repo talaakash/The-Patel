@@ -175,4 +175,35 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(82)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch selectedFilter{
+        case .filterAll:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.profileViewScreen) as? ProfileViewVC
+            vc?.userData = filteredProfiles?[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        case .filterSurname:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.profileViewScreen) as? ProfileViewVC
+            vc?.userData = filteredProfiles?[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        case .filterProfile:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.profileViewScreen) as? ProfileViewVC
+            vc?.userData = filteredProfiles?[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        case .filterLocation:
+            self.view.makeToast("This Feature is Comming Soon")
+        case .filterReputedPeople:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.reputedPeopleProfileScreen) as? ReputedPeopleProfileVC
+            vc?.profile = filteredPeople?[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        case .filterOccupation:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.profileViewScreen) as? ProfileViewVC
+            vc?.userData = filteredProfiles?[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        case .filterSamaj:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.samajDetailsScreen) as? SamajDetailVC
+            vc?.samaj = filteredSamajs?[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+    }
 }

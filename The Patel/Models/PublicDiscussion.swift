@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestoreInternal
 
-class PublicDiscussion{
+class PublicDiscussion: Codable{
     let id: String?
     let image: String?
     let topic: String?

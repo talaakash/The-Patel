@@ -23,7 +23,15 @@ class ChatScreenVC: UIViewController{
     var sendingImage = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
+        preLoading()
         setup()
+    }
+    
+    private func preLoading(){
+        let messageList = DataHandler.shared.getData(model: Messages.self, key: "\(UserSession.messages)\(discussion?.id ?? "")")
+        let imagesJson = DataHandler.shared.getJson(key: "\(UserSession.images)\(discussion?.id ?? "")")
+        messages = messageList ?? []
+        tempImages = imagesJson ?? [:]
     }
     
     private func setup(){
@@ -51,8 +59,8 @@ class ChatScreenVC: UIViewController{
     private func setListener(){
         FirestoreManager.shared.setDocumentListner(collection: .messages, field: ModelKey.discussionId, value: discussion?.id ?? "", complationHandler: { status, error, snapShot in
             if status == true{
-                self.messages.removeAll()
                 if let data = snapShot{
+                    self.messages.removeAll()
                     for message in data{
                         let messageobj = Messages(json: message)
                         self.messages.append(messageobj)
@@ -70,6 +78,8 @@ class ChatScreenVC: UIViewController{
                         })
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+                        DataHandler.shared.setData(model: Messages.self, key: "\(UserSession.messages)\(self.discussion?.id ?? "")", data: self.messages)
+                        DataHandler.shared.setJson(key: "\(UserSession.images)\(self.discussion?.id ?? "")", json: self.tempImages)
                         self.discussionTbl.reloadData()
                         let numberOfRows = self.discussionTbl.numberOfRows(inSection: 0)
                         if numberOfRows > 0 {

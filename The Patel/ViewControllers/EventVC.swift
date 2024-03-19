@@ -14,22 +14,27 @@ class EventVC: UIViewController {
     var events: [Event] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        preLoding()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        events = []
         setup()
     }
     
-    private func setup(){
+    private func preLoding(){
         eventsCollection.register(UINib(nibName: NibsKey.event, bundle: nil), forCellWithReuseIdentifier: NibsKey.eventIdentifier)
-        ProgressBar.shared.show()
+        let eventList = DataHandler.shared.getData(model: Event.self, key: UserSession.events)
+        events = eventList ?? []
+    }
+    
+    private func setup(){
         FirestoreManager.shared.getDocuments(collection: .Event, complationHandler: { status,error,data in
-            ProgressBar.shared.hide()
             if status == true{
+                self.events = []
                 for event in data ?? []{
                     self.events.append(Event(json: event))
                 }
+                DataHandler.shared.setData(model: Event.self, key: UserSession.events, data: self.events)
                 self.eventsCollection.reloadData()
             } else {
                 self.view.makeToast(error)

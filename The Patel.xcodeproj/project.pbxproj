@@ -37,6 +37,7 @@
 		38A8D90F2B9853DA00A0BBCF /* EventImagesCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A8D90D2B9853DA00A0BBCF /* EventImagesCollection.xib */; };
 		38AA1FD72B91B7D9006E1194 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA1FD62B91B7D9006E1194 /* Location.swift */; };
 		38AA1FD92B91C2FE006E1194 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA1FD82B91C2FE006E1194 /* Extentions.swift */; };
+		38AC04C62BA965250056681C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC04C52BA965250056681C /* DataHandler.swift */; };
 		38ACEFDF2BA182EE007CF9F0 /* ChatScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACEFDE2BA182EE007CF9F0 /* ChatScreenVC.swift */; };
 		38AF255E2B99E973007F0C59 /* Samaj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF255D2B99E973007F0C59 /* Samaj.swift */; };
 		38AF25602B99F75C007F0C59 /* ReputedPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF255F2B99F75C007F0C59 /* ReputedPeople.swift */; };
@@ -120,6 +121,7 @@
 		38A8D90D2B9853DA00A0BBCF /* EventImagesCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventImagesCollection.xib; sourceTree = "<group>"; };
 		38AA1FD62B91B7D9006E1194 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		38AA1FD82B91C2FE006E1194 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		38AC04C52BA965250056681C /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		38ACEFDE2BA182EE007CF9F0 /* ChatScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenVC.swift; sourceTree = "<group>"; };
 		38AF255D2B99E973007F0C59 /* Samaj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samaj.swift; sourceTree = "<group>"; };
 		38AF255F2B99F75C007F0C59 /* ReputedPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReputedPeople.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				3845B5092B9073C1003BE303 /* LocationManager.swift */,
 				383D82562B91E64A003F7AED /* ConstantKeys.swift */,
 				38E770342BA860360091853C /* FirebaseRemoteConfig.swift */,
+				38AC04C52BA965250056681C /* DataHandler.swift */,
 			);
 			path = HelperClass;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				38CCABA62B8C6A9B00FE9B0C /* UserProfile.swift in Sources */,
 				38F422422BA061E600DD4844 /* Messages.swift in Sources */,
 				38AF25602B99F75C007F0C59 /* ReputedPeople.swift in Sources */,
+				38AC04C62BA965250056681C /* DataHandler.swift in Sources */,
 				38DB9AB32BA1D47600D5D5EE /* OurMessage.swift in Sources */,
 				38A34C5A2B8DF38D003616AF /* CustomAnnotation.swift in Sources */,
 				3845B50A2B9073C1003BE303 /* LocationManager.swift in Sources */,

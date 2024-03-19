@@ -15,18 +15,26 @@ class PublicDiscussionVC: UIViewController {
     var discussions: [PublicDiscussion] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        preLoading()
     }
     override func viewWillAppear(_ animated: Bool) {
-        discussions = []
         setup()
+    }
+    
+    private func preLoading(){
+        let discussionList = DataHandler.shared.getData(model: PublicDiscussion.self, key: UserSession.publicDiscussion)
+        discussions = discussionList ?? []
+        if discussionList == nil{
+            ProgressBar.shared.show()
+        }
     }
     
     private func setup(){
         publicDiscussiontbl.register(UINib(nibName: NibsKey.publicDiscussion, bundle: nil), forCellReuseIdentifier: NibsKey.publicDiscussionIdentifier)
-        ProgressBar.shared.show()
         FirestoreManager.shared.getDocuments(collection: .publicDiscussion, complationHandler: { status, error, snapshot in
             if status == true{
                 if let data = snapshot{
+                    self.discussions = []
                     for discussion in data{
                         self.discussions.append(PublicDiscussion(json: discussion))
                     }
@@ -39,6 +47,7 @@ class PublicDiscussionVC: UIViewController {
         })
         DispatchQueue.main.asyncAfter(deadline: .now() + 3 , execute: {
             ProgressBar.shared.hide()
+            DataHandler.shared.setData(model: PublicDiscussion.self, key: UserSession.publicDiscussion, data: self.discussions)
             self.publicDiscussiontbl.reloadData()
         })
     }

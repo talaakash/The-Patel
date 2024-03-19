@@ -15,12 +15,20 @@ class PatelSamajsVC: UIViewController {
     var locations: [Location] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setup()
+        preLoading()
     }
     override func viewWillAppear(_ animated: Bool) {
-        samajs = []
-        locations = []
         setup()
+    }
+    
+    private func preLoading(){
+        let samajList = DataHandler.shared.getData(model: Samaj.self, key: UserSession.samajs)
+        let samajLocation = DataHandler.shared.getData(model: Location.self, key: UserSession.locationForSamajs)
+        samajs = samajList ?? []
+        locations = samajLocation ?? []
+        if samajList == nil || samajLocation == nil{
+            ProgressBar.shared.show()
+        }
     }
     
     private func setup(){
@@ -28,6 +36,8 @@ class PatelSamajsVC: UIViewController {
         FirestoreManager.shared.getDocuments(collection: .Samaj, complationHandler: { status, error, json in
             if status == true{
                 if let data = json{
+                    self.samajs = []
+                    self.locations = []
                     for samaj in data{
                         self.samajs.append(Samaj(json: samaj))
                     }
@@ -53,6 +63,8 @@ class PatelSamajsVC: UIViewController {
         })
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             ProgressBar.shared.hide()
+            DataHandler.shared.setData(model: Samaj.self, key: UserSession.samajs, data: self.samajs)
+            DataHandler.shared.setData(model: Location.self, key: UserSession.locationForSamajs, data: self.locations)
             self.samajList.reloadData()
         })
         samajList.register(UINib(nibName: NibsKey.patelSamajList, bundle: nil), forCellReuseIdentifier: NibsKey.patelSamajListIdentifier)

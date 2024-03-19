@@ -834,13 +834,21 @@
                                             <action selector="createButtonClicked:" destination="UJx-N9-6hS" eventType="touchUpInside" id="TP2-wG-58s"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public Discussions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-Ub-NDc">
+                                        <rect key="frame" x="125" y="16.333333333333329" width="143" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" name="Foreground"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="UniversalBackGround"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5TL-Qm-XVg" secondAttribute="bottom" constant="8" id="2C0-GI-GK6"/>
                                     <constraint firstItem="5TL-Qm-XVg" firstAttribute="leading" secondItem="DXo-ci-MUb" secondAttribute="leading" constant="16" id="AIP-Vz-PaE"/>
                                     <constraint firstItem="TcX-uj-Ikf" firstAttribute="top" secondItem="DXo-ci-MUb" secondAttribute="top" constant="8" id="WwR-VJ-j8p"/>
+                                    <constraint firstItem="6sc-Ub-NDc" firstAttribute="centerY" secondItem="DXo-ci-MUb" secondAttribute="centerY" id="b1K-yA-SbJ"/>
                                     <constraint firstAttribute="trailing" secondItem="TcX-uj-Ikf" secondAttribute="trailing" constant="16" id="dGz-fM-MaN"/>
+                                    <constraint firstItem="6sc-Ub-NDc" firstAttribute="centerX" secondItem="DXo-ci-MUb" secondAttribute="centerX" id="dvq-4v-snR"/>
                                     <constraint firstItem="TcX-uj-Ikf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5TL-Qm-XVg" secondAttribute="trailing" constant="8" symbolic="YES" id="eAM-E8-jPv"/>
                                     <constraint firstAttribute="bottom" secondItem="TcX-uj-Ikf" secondAttribute="bottom" constant="8" id="g8t-LL-TSm"/>
                                     <constraint firstItem="5TL-Qm-XVg" firstAttribute="top" secondItem="DXo-ci-MUb" secondAttribute="top" constant="8" id="tss-KP-JFf"/>
@@ -1220,14 +1228,22 @@
                                             <action selector="btnAddClicked:" destination="TTo-EN-Agv" eventType="touchUpInside" id="iCC-mc-qiL"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ7-Sx-hs9">
+                                        <rect key="frame" x="170" y="16" width="53" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" name="Foreground"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="UniversalBackGround"/>
                                 <constraints>
+                                    <constraint firstItem="HJ7-Sx-hs9" firstAttribute="centerY" secondItem="6ic-jn-mKH" secondAttribute="centerY" id="Dnx-Ze-7b0"/>
                                     <constraint firstAttribute="bottom" secondItem="CUX-pw-Xy6" secondAttribute="bottom" constant="8" id="MZ6-ND-wMj"/>
                                     <constraint firstItem="CUX-pw-Xy6" firstAttribute="top" secondItem="6ic-jn-mKH" secondAttribute="top" constant="8" id="O0W-oB-3uh"/>
                                     <constraint firstItem="VQZ-1W-wGL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CUX-pw-Xy6" secondAttribute="trailing" constant="8" symbolic="YES" id="Ra9-qQ-Wda"/>
                                     <constraint firstItem="VQZ-1W-wGL" firstAttribute="top" secondItem="6ic-jn-mKH" secondAttribute="top" constant="8" id="X6e-Uj-wkq"/>
                                     <constraint firstAttribute="trailing" secondItem="VQZ-1W-wGL" secondAttribute="trailing" constant="16" id="iCE-lD-IbW"/>
+                                    <constraint firstItem="HJ7-Sx-hs9" firstAttribute="centerX" secondItem="6ic-jn-mKH" secondAttribute="centerX" id="wNw-3E-V4Z"/>
                                     <constraint firstAttribute="bottom" secondItem="VQZ-1W-wGL" secondAttribute="bottom" constant="8" id="zFJ-uc-KO9"/>
                                 </constraints>
                             </view>
@@ -1727,15 +1743,23 @@
                                             <action selector="addButtonClicked:" destination="ohR-hL-GPQ" eventType="touchUpInside" id="Di0-FF-cxi"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patel Samajs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkC-E0-Pmy">
+                                        <rect key="frame" x="146.33333333333334" y="16.333333333333329" width="100.33333333333334" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" name="Foreground"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="UniversalBackGround"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="p1K-hi-ckL" secondAttribute="trailing" constant="16" id="Ao5-e2-zb5"/>
                                     <constraint firstItem="p1K-hi-ckL" firstAttribute="top" secondItem="w8V-Lh-ciH" secondAttribute="top" constant="8" id="Ggd-Y2-DhV"/>
+                                    <constraint firstItem="OkC-E0-Pmy" firstAttribute="centerY" secondItem="w8V-Lh-ciH" secondAttribute="centerY" id="OYQ-1B-xYU"/>
                                     <constraint firstItem="yHQ-OA-qcH" firstAttribute="leading" secondItem="w8V-Lh-ciH" secondAttribute="leading" constant="16" id="OwU-P0-mWQ"/>
                                     <constraint firstItem="yHQ-OA-qcH" firstAttribute="top" secondItem="w8V-Lh-ciH" secondAttribute="top" constant="8" id="RhG-hg-cRc"/>
                                     <constraint firstAttribute="bottom" secondItem="yHQ-OA-qcH" secondAttribute="bottom" constant="8" id="SRS-no-ybN"/>
                                     <constraint firstAttribute="bottom" secondItem="p1K-hi-ckL" secondAttribute="bottom" constant="8" id="WV6-bZ-8fQ"/>
+                                    <constraint firstItem="OkC-E0-Pmy" firstAttribute="centerX" secondItem="w8V-Lh-ciH" secondAttribute="centerX" id="fjn-Bf-qYS"/>
                                     <constraint firstItem="p1K-hi-ckL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yHQ-OA-qcH" secondAttribute="trailing" constant="8" symbolic="YES" id="ugu-L9-t8l"/>
                                 </constraints>
                             </view>
@@ -2934,8 +2958,8 @@
                                                             <action selector="backButtonClicked:" destination="k0b-eK-7Od" eventType="touchUpInside" id="NB2-MM-7yu"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Samaj Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu2-bO-kgV">
-                                                        <rect key="frame" x="133.66666666666666" y="15" width="125.99999999999997" height="26"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Samaj Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu2-bO-kgV">
+                                                        <rect key="frame" x="136.66666666666666" y="15" width="119.66666666666666" height="26"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                                         <color key="textColor" name="Foreground"/>
                                                         <nil key="highlightedColor"/>
@@ -3465,6 +3489,12 @@
                                             <action selector="addButtonClicked:" destination="t3a-QD-kbZ" eventType="touchUpInside" id="SaY-L5-19y"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputed Peoples" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-7H-BDW">
+                                        <rect key="frame" x="128.66666666666666" y="16.333333333333329" width="135.99999999999997" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" name="Foreground"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="UniversalBackGround"/>
                                 <constraints>
@@ -3473,7 +3503,9 @@
                                     <constraint firstAttribute="bottom" secondItem="oCp-jN-7sK" secondAttribute="bottom" constant="8" id="ImV-BY-90w"/>
                                     <constraint firstItem="oCp-jN-7sK" firstAttribute="top" secondItem="xYl-4E-Qbv" secondAttribute="top" constant="8" id="QqD-ko-TxC"/>
                                     <constraint firstItem="vaU-lZ-hqC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oCp-jN-7sK" secondAttribute="trailing" constant="8" symbolic="YES" id="XIm-F6-1Lm"/>
+                                    <constraint firstItem="Pjy-7H-BDW" firstAttribute="centerX" secondItem="xYl-4E-Qbv" secondAttribute="centerX" id="dFO-NV-zLq"/>
                                     <constraint firstAttribute="trailing" secondItem="vaU-lZ-hqC" secondAttribute="trailing" constant="16" id="m9d-Vu-rY6"/>
+                                    <constraint firstItem="Pjy-7H-BDW" firstAttribute="centerY" secondItem="xYl-4E-Qbv" secondAttribute="centerY" id="rjG-6k-G5Z"/>
                                     <constraint firstAttribute="bottom" secondItem="vaU-lZ-hqC" secondAttribute="bottom" constant="8" id="ybJ-th-PLF"/>
                                 </constraints>
                             </view>

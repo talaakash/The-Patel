@@ -15,10 +15,18 @@ class ReputedPeopleVC: UIViewController {
     var reputedPeople: [ReputedPeople] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        preLoading()
     }
     override func viewWillAppear(_ animated: Bool) {
-        reputedPeople = []
         setup()
+    }
+    
+    private func preLoading(){
+        let reputedPeopleList = DataHandler.shared.getData(model: ReputedPeople.self, key: UserSession.reputedPeople)
+        reputedPeople = reputedPeopleList ?? []
+        if reputedPeopleList == nil{
+            ProgressBar.shared.show()
+        }
     }
     
     private func setup(){
@@ -26,6 +34,7 @@ class ReputedPeopleVC: UIViewController {
         FirestoreManager.shared.getDocuments(collection: .reputedPeople, complationHandler: { status, error, snapShot in
             if status == true{
                 if let data = snapShot{
+                    self.reputedPeople = []
                     for people in data{
                         self.reputedPeople.append(ReputedPeople(json: people))
                     }
@@ -33,6 +42,8 @@ class ReputedPeopleVC: UIViewController {
             } else { self.view.makeToast(error) }
         })
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            ProgressBar.shared.hide()
+            DataHandler.shared.setData(model: ReputedPeople.self, key: UserSession.reputedPeople, data: self.reputedPeople)
             self.reputedPeopleTbl.reloadData()
         })
     }

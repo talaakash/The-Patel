@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Samaj{
+class Samaj: Codable{
     let name: String
     let description: String
     let facilities: [String]

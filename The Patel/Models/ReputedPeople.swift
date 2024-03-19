@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestoreInternal
 
-class ReputedPeople{
+class ReputedPeople: Codable{
     let name: String
     let description: String
     let images: [String]
