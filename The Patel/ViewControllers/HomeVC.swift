@@ -22,7 +22,7 @@ class HomeVC: UIViewController {
     private func setup(){
         userName.text = "\(userData?.name ?? "") \(userData?.surname ?? "")"
         profilePic.kf.setImage(with: URL(string: userData?.profilepicture ?? ""))
-        birthDate.text = "Born on \(userData?.birthdate ?? "")"
+        birthDate.text = "Born on \(userData?.birthdate?.getDate() ?? "")"
     }
 
     @IBAction func viewProfile(_ sender: UIButton){

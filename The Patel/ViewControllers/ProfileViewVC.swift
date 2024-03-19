@@ -53,7 +53,7 @@ class ProfileViewVC: UIViewController {
         }
         profilepic.kf.setImage(with: URL(string: userData?.profilepicture ?? ""))
         name.text = "\(userData?.name ?? "") \(userData?.surname ?? "")"
-        birth.text = "\(birth.text ?? "") \(userData?.birthdate ?? "")"
+        birth.text = "\(birth.text ?? "") \(userData?.birthdate?.getDate() ?? "")"
         eduTitle.text = userData?.education?[ModelKey.educationTitle]
         eduDescription.text = userData?.education?[ModelKey.educationDescription]
         occupationTitle.text = userData?.occupation?[ModelKey.occupationTitle]

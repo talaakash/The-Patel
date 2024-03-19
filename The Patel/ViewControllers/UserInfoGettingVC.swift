@@ -82,12 +82,9 @@ class UserInfoGettingVC: UIViewController{
             self.view.makeToast(ErrorKey.invalidDetails)
             return
         }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = ModelKey.userDateFormat
-        let birthDate = dateFormatter.string(from: birthdate.date)
         guard let user = UserDefaults.standard.object(forKey: UserSession.user) as? [String:Any] else { return }
         guard let userid = user[UserSession.userID] as? String else { return }
-        FirestoreManager.shared.setDocument(collection: .User, key: userid, data: [ModelKey.birthDate:birthDate, ModelKey.currentLocation:[currentcordinate.latitude,currentcordinate.longitude],ModelKey.nativeLocation:[nativecordinate?.latitude,nativecordinate?.longitude],ModelKey.education:[ModelKey.educationTitle:educationTitle,ModelKey.educationDescription:educationDescription],ModelKey.occupation:[ModelKey.occupationTitle:occupationTitle,ModelKey.occupationDescription:occupationDecription]],merge: true, complationHandler: { status,error in
+        FirestoreManager.shared.setDocument(collection: .User, key: userid, data: [ModelKey.birthDate:birthdate.date, ModelKey.currentLocation:[currentcordinate.latitude,currentcordinate.longitude],ModelKey.nativeLocation:[nativecordinate?.latitude,nativecordinate?.longitude],ModelKey.education:[ModelKey.educationTitle:educationTitle,ModelKey.educationDescription:educationDescription],ModelKey.occupation:[ModelKey.occupationTitle:occupationTitle,ModelKey.occupationDescription:occupationDecription]],merge: true, complationHandler: { status,error in
             if status == false{
                 self.view.makeToast(error)
             }

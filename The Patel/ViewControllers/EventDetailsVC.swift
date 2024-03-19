@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import UserNotifications
 
 class EventDetailsVC: UIViewController {
     
@@ -60,7 +61,7 @@ class EventDetailsVC: UIViewController {
         self.eventLocation.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)), animated: true)
         self.eventName.text = event?.name
         self.eventDescription.text = event?.description
-        self.eventDate.text = event?.dateandtime
+        self.eventDate.text = event?.dateandtime.getDate()
         chiefGuestCollection.register(UINib(nibName: NibsKey.chiefGuest, bundle: nil), forCellWithReuseIdentifier: NibsKey.chiefGuestIdentifier)
         eventImages.register(UINib(nibName: NibsKey.eventImagesCollection, bundle: nil), forCellWithReuseIdentifier: NibsKey.eventImagesCollectionIdentifier)
         if event?.images != nil{
@@ -106,6 +107,40 @@ class EventDetailsVC: UIViewController {
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: region.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: region.span)])
     }
     
+    private func scheduleNotification(){
+        let date = event?.dateandtime
+        let calander = Calendar.current
+        let notificationCeneter = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        content.title = "\(organizer?.name ?? "")'s \(event?.name ?? "")"
+        content.body = "Get Ready For \(event?.name ?? "")"
+        content.sound = .default
+        
+        var dateComponent = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current)
+        if calander.component(.day, from: date ?? Date()) == 1{
+            dateComponent.day = 30
+            dateComponent.month = calander.component(.month, from: date ?? Date()) - 1
+        } else {
+            dateComponent.day = calander.component(.day, from: date ?? Date()) - 1
+            dateComponent.month = calander.component(.month, from: date ?? Date())
+        }
+        dateComponent.hour = calander.component(.hour, from: date ?? Date())
+        dateComponent.minute = calander.component(.minute, from: date ?? Date())
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+        let request = UNNotificationRequest(identifier: ModelKey.notificationIdentifier, content: content, trigger: trigger)
+        notificationCeneter.removeAllPendingNotificationRequests()
+        notificationCeneter.add(request)
+    }
+    
+    private func checkAuthorization(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                self.scheduleNotification()
+            }
+        }
+    }
+    
     @IBAction func registerInEvent(_ sender: UIButton){
         guard let eventID = event?.id, var guestList = event?.guest else { return }
         guard let user = UserDefaults.standard.object(forKey: UserSession.user) as? [String:Any] else { return }
@@ -114,6 +149,7 @@ class EventDetailsVC: UIViewController {
         FirestoreManager.shared.setDocument(collection: .Event, key: eventID, data: json, merge: true, complationHandler: { status,error in
             if status == true{
                 self.btnRegister.isHidden = true
+                self.checkAuthorization()
             } else {
                 self.view.makeToast(error)
             }

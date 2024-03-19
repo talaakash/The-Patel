@@ -122,6 +122,7 @@ class ModelKey{
     static let chiefGuest = "Chief Guest"
     static let guest = "Guests"
     static let Images = "Images"
+    static let notificationIdentifier = "EventAlert"
     static let dateandtimeFormat = "yyyy-MM-dd HH:mm:ss"
     
     // Samaj Model

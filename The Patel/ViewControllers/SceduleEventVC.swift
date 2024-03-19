@@ -106,13 +106,9 @@ class SceduleEventVC: UIViewController {
         guard let eventName = self.eventName.text, let eventDescription = self.eventDescription.text, let venue = annonation?.coordinate, eventName != "", eventDescription != "" else { self.view.makeToast(ErrorKey.invalidDetails); return }
         guard let user = UserDefaults.standard.object(forKey: UserSession.user) as? [String:Any] else { return }
         guard let userid = user[UserSession.userID] as? String else { return }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = ModelKey.dateandtimeFormat
-        let eventDate = dateFormatter.string(from: eventDateTime.date)
-        let currentDate = dateFormatter.string(from: Date())
         let guestid = selectedGuest.map({ $0.email })
         let uniqueID = FirestoreManager.shared.getUniqueID(collection: .Event)
-        FirestoreManager.shared.setDocument(collection: .Event, key: uniqueID, data: [ModelKey.id:uniqueID, ModelKey.createDate: currentDate, ModelKey.eventName: eventName, ModelKey.eventDescription: eventDescription, ModelKey.organizer: userid, ModelKey.latitude: venue.latitude, ModelKey.longitude: venue.longitude, ModelKey.dateandtime: eventDate, ModelKey.chiefGuest: guestid, ModelKey.guest: [], ModelKey.Images: images], complationHandler: { status,error in
+        FirestoreManager.shared.setDocument(collection: .Event, key: uniqueID, data: [ModelKey.id:uniqueID, ModelKey.createDate: Date(), ModelKey.eventName: eventName, ModelKey.eventDescription: eventDescription, ModelKey.organizer: userid, ModelKey.latitude: venue.latitude, ModelKey.longitude: venue.longitude, ModelKey.dateandtime: eventDateTime.date, ModelKey.chiefGuest: guestid, ModelKey.guest: [], ModelKey.Images: images], complationHandler: { status,error in
             if status == true{
                 self.navigationController?.popViewController(animated: true)
             } else {

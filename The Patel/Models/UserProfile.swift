@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestoreInternal
 
 class UserProfile{
     let name: String?
@@ -15,7 +16,7 @@ class UserProfile{
     let profilepicture: String?
     let currentLocation: [Double]?
     let nativeLocation: [Double]?
-    let birthdate: String?
+    let birthdate: Date?
     let education: [String:String]?
     let occupation: [String:String]?
     
@@ -27,7 +28,8 @@ class UserProfile{
         self.profilepicture = json[ModelKey.profilePic] as? String
         self.currentLocation = json[ModelKey.currentLocation] as? [Double]
         self.nativeLocation = json[ModelKey.nativeLocation] as? [Double]
-        self.birthdate = json[ModelKey.birthDate] as? String
+        let date = json[ModelKey.birthDate] as? Timestamp
+        self.birthdate = date?.dateValue()
         self.education = json[ModelKey.education] as? [String:String]
         self.occupation = json[ModelKey.occupation] as? [String:String]
     }
