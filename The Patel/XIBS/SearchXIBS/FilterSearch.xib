@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchFilter" id="gTV-IL-0wX" customClass="FilterSearch" customModule="The_Patel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="57"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="279" height="57"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2E-Ut-tjf">
+                        <rect key="frame" x="8" y="8" width="263" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-lx-i4c">
+                                <rect key="frame" x="8" y="8.9999999999999982" width="247" height="23.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" name="Foreground"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="BackGround"/>
+                        <constraints>
+                            <constraint firstItem="YOd-lx-i4c" firstAttribute="leading" secondItem="e2E-Ut-tjf" secondAttribute="leading" constant="8" id="YUf-rL-DzI"/>
+                            <constraint firstItem="YOd-lx-i4c" firstAttribute="centerY" secondItem="e2E-Ut-tjf" secondAttribute="centerY" id="inU-oS-e9p"/>
+                            <constraint firstAttribute="trailing" secondItem="YOd-lx-i4c" secondAttribute="trailing" constant="8" id="vcf-wQ-2aq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadow">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="e2E-Ut-tjf" secondAttribute="trailing" constant="8" id="VCa-L1-SR4"/>
+                <constraint firstItem="e2E-Ut-tjf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="dcA-W4-P4y"/>
+                <constraint firstItem="e2E-Ut-tjf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="s9y-7s-1Wb"/>
+                <constraint firstAttribute="bottom" secondItem="e2E-Ut-tjf" secondAttribute="bottom" constant="8" id="u6t-yT-lZs"/>
+            </constraints>
+            <size key="customSize" width="279" height="57"/>
+            <connections>
+                <outlet property="filterName" destination="YOd-lx-i4c" id="2CB-ie-9P2"/>
+                <outlet property="filterView" destination="e2E-Ut-tjf" id="m4t-eb-Z35"/>
+            </connections>
+            <point key="canvasLocation" x="312.21374045801525" y="22.183098591549296"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackGround">
+            <color red="0.24705882352941178" green="0.44705882352941179" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Foreground">
+            <color red="0.85882352941176465" green="0.88627450980392153" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

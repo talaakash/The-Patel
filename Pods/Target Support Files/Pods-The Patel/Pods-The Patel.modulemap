@@ -1,0 +1,6 @@
+framework module Pods_The_Patel {
+  umbrella header "Pods-The Patel-umbrella.h"
+
+  export *
+  module * { export * }
+}

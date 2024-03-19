@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SendingMessage" rowHeight="75" id="KGk-i7-Jjw" customClass="SendingMessage" customModule="The_Patel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWy-oC-4rJ" userLabel="MessageView">
+                        <rect key="frame" x="136.66666666666666" y="8" width="115.33333333333334" height="59"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-1U-YBG">
+                                <rect key="frame" x="76" y="31.666666666666664" width="31.333333333333329" height="19.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" name="Foreground"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7Y-sO-zmj">
+                                <rect key="frame" x="8" y="8" width="60" height="43"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <color key="textColor" name="Foreground"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="BackGround"/>
+                        <constraints>
+                            <constraint firstItem="l7Y-sO-zmj" firstAttribute="top" secondItem="GWy-oC-4rJ" secondAttribute="top" constant="8" id="4kz-fH-wka"/>
+                            <constraint firstItem="l7Y-sO-zmj" firstAttribute="leading" secondItem="GWy-oC-4rJ" secondAttribute="leading" constant="8" id="5cQ-2B-vxW"/>
+                            <constraint firstAttribute="trailing" secondItem="ylc-1U-YBG" secondAttribute="trailing" constant="8" id="SP3-ht-1zd"/>
+                            <constraint firstAttribute="bottom" secondItem="ylc-1U-YBG" secondAttribute="bottom" constant="8" id="Srf-Ox-ciZ"/>
+                            <constraint firstItem="ylc-1U-YBG" firstAttribute="leading" secondItem="l7Y-sO-zmj" secondAttribute="trailing" constant="8" id="W9r-62-ob9"/>
+                            <constraint firstAttribute="bottom" secondItem="l7Y-sO-zmj" secondAttribute="bottom" constant="8" id="lHB-xn-48x"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NM-g5-im0">
+                        <rect key="frame" x="260" y="51" width="58" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" name="Foreground"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="UniversalBackGround"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="3NM-g5-im0" secondAttribute="trailing" constant="8" id="3Fu-g6-LqV"/>
+                    <constraint firstAttribute="bottom" secondItem="3NM-g5-im0" secondAttribute="bottom" constant="8" id="OJm-uN-yIM"/>
+                    <constraint firstAttribute="bottom" secondItem="GWy-oC-4rJ" secondAttribute="bottom" constant="8" id="ONd-pa-Sgv"/>
+                    <constraint firstItem="GWy-oC-4rJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fL8-AH-MyE"/>
+                    <constraint firstItem="3NM-g5-im0" firstAttribute="leading" secondItem="GWy-oC-4rJ" secondAttribute="trailing" constant="8" id="lAc-np-HDP"/>
+                    <constraint firstItem="GWy-oC-4rJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="mBS-Pt-sTO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="message" destination="l7Y-sO-zmj" id="95i-hM-knM"/>
+                <outlet property="time" destination="ylc-1U-YBG" id="yw0-mb-U2D"/>
+            </connections>
+            <point key="canvasLocation" x="132.82442748091603" y="31.338028169014088"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackGround">
+            <color red="0.24705882352941178" green="0.44705882352941179" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Foreground">
+            <color red="0.85882352941176465" green="0.88627450980392153" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UniversalBackGround">
+            <color red="0.066666666666666666" green="0.17647058823529413" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

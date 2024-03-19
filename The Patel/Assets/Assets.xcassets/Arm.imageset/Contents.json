@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "A strong Arm wi db2d6544-c2dd-4336-9783-1b985bcb0afd.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
