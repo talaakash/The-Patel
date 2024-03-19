@@ -22,13 +22,15 @@ class PatelSamajsVC: UIViewController {
     }
     
     private func preLoading(){
-        let samajList = DataHandler.shared.getData(model: Samaj.self, key: UserSession.samajs)
-        let samajLocation = DataHandler.shared.getData(model: Location.self, key: UserSession.locationForSamajs)
-        samajs = samajList ?? []
-        locations = samajLocation ?? []
-        if samajList == nil || samajLocation == nil{
-            ProgressBar.shared.show()
-        }
+//        let samajList = DataHandler.shared.getData(model: Samaj.self, key: UserSession.samajs)
+//        let samajLocation = DataHandler.shared.getData(model: Location.self, key: UserSession.locationForSamajs)
+//        samajs = samajList ?? []
+//        locations = samajLocation ?? []
+//        if samajList == nil || samajLocation == nil{
+//            ProgressBar.shared.show()
+//            samajs = []
+//            locations = []
+//        }
     }
     
     private func setup(){

@@ -38,6 +38,7 @@
 		38AA1FD72B91B7D9006E1194 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA1FD62B91B7D9006E1194 /* Location.swift */; };
 		38AA1FD92B91C2FE006E1194 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA1FD82B91C2FE006E1194 /* Extentions.swift */; };
 		38AC04C62BA965250056681C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC04C52BA965250056681C /* DataHandler.swift */; };
+		38AC04C82BA9A4550056681C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC04C72BA9A4550056681C /* SettingVC.swift */; };
 		38ACEFDF2BA182EE007CF9F0 /* ChatScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACEFDE2BA182EE007CF9F0 /* ChatScreenVC.swift */; };
 		38AF255E2B99E973007F0C59 /* Samaj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF255D2B99E973007F0C59 /* Samaj.swift */; };
 		38AF25602B99F75C007F0C59 /* ReputedPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF255F2B99F75C007F0C59 /* ReputedPeople.swift */; };
@@ -78,6 +79,7 @@
 		38DB9AB32BA1D47600D5D5EE /* OurMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB9AAF2BA1D47600D5D5EE /* OurMessage.swift */; };
 		38DB9AB42BA1D47600D5D5EE /* OthersMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB9AB02BA1D47600D5D5EE /* OthersMessage.xib */; };
 		38DB9AB52BA1D47600D5D5EE /* OurMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB9AB12BA1D47600D5D5EE /* OurMessage.xib */; };
+		38DF97312BA9AC7900A4C3EB /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF97302BA9AC7900A4C3EB /* EditProfileVC.swift */; };
 		38E770352BA860360091853C /* FirebaseRemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E770342BA860360091853C /* FirebaseRemoteConfig.swift */; };
 		38E8C6D32B9EEE5600FD7255 /* AddSamajVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E8C6D22B9EEE5600FD7255 /* AddSamajVC.swift */; };
 		38F4223E2BA0539E00DD4844 /* PublicDiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F4223D2BA0539E00DD4844 /* PublicDiscussionVC.swift */; };
@@ -122,6 +124,7 @@
 		38AA1FD62B91B7D9006E1194 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		38AA1FD82B91C2FE006E1194 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		38AC04C52BA965250056681C /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		38AC04C72BA9A4550056681C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		38ACEFDE2BA182EE007CF9F0 /* ChatScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenVC.swift; sourceTree = "<group>"; };
 		38AF255D2B99E973007F0C59 /* Samaj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samaj.swift; sourceTree = "<group>"; };
 		38AF255F2B99F75C007F0C59 /* ReputedPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReputedPeople.swift; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 		38DB9AAF2BA1D47600D5D5EE /* OurMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurMessage.swift; sourceTree = "<group>"; };
 		38DB9AB02BA1D47600D5D5EE /* OthersMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OthersMessage.xib; sourceTree = "<group>"; };
 		38DB9AB12BA1D47600D5D5EE /* OurMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OurMessage.xib; sourceTree = "<group>"; };
+		38DF97302BA9AC7900A4C3EB /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		38E770342BA860360091853C /* FirebaseRemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRemoteConfig.swift; sourceTree = "<group>"; };
 		38E8C6D22B9EEE5600FD7255 /* AddSamajVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSamajVC.swift; sourceTree = "<group>"; };
 		38F4223D2BA0539E00DD4844 /* PublicDiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicDiscussionVC.swift; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 				382A88422BA32C9700A39441 /* ReputedPeopleVC.swift */,
 				38D202062BA800930016BE2E /* AddReputedPeopleVC.swift */,
 				382E01542BA818E100CC7B38 /* ReputedPeopleProfileVC.swift */,
+				38AC04C72BA9A4550056681C /* SettingVC.swift */,
+				38DF97302BA9AC7900A4C3EB /* EditProfileVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -614,12 +620,14 @@
 				385B55AF2B88B94900E532C0 /* SignupVC.swift in Sources */,
 				382A88432BA32C9700A39441 /* ReputedPeopleVC.swift in Sources */,
 				38DB9AB22BA1D47600D5D5EE /* OthersMessage.swift in Sources */,
+				38AC04C82BA9A4550056681C /* SettingVC.swift in Sources */,
 				38C335A52B9732350002E634 /* Events.swift in Sources */,
 				38613C922B9ED2DC00627BF9 /* PatelSamajsVC.swift in Sources */,
 				38F4223E2BA0539E00DD4844 /* PublicDiscussionVC.swift in Sources */,
 				38BD7C322B8866CD00F0C3C7 /* FirebaseAuthManager.swift in Sources */,
 				38E8C6D32B9EEE5600FD7255 /* AddSamajVC.swift in Sources */,
 				383D82572B91E64A003F7AED /* ConstantKeys.swift in Sources */,
+				38DF97312BA9AC7900A4C3EB /* EditProfileVC.swift in Sources */,
 				383D82592B91F805003F7AED /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

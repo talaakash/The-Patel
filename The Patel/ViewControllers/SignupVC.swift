@@ -71,6 +71,10 @@ class SignupVC: UIViewController{
 
     }
     
+    @IBAction func loginButtonClicked(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func profilePicChange(_ sender: UIControl){
         let picker = UIImagePickerController()
         picker.delegate = self

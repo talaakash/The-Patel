@@ -18,6 +18,24 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         setup()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        load()
+    }
+    
+    private func load(){
+        guard let user = UserDefaults.standard.object(forKey: UserSession.user) as? [String:Any] else { return }
+        guard let userid = user[UserSession.userID] as? String else { return }
+        FirestoreManager.shared.getDocument(collection: .User, name: userid, complationHandler: { status, error , data in
+            if status == true{
+                if let json = data{
+                    self.userData = UserProfile(json: json)
+                    self.profilePic.kf.setImage(with: URL(string: self.userData?.profilepicture ?? ""))
+                    self.birthDate.text = "Born on \(self.userData?.birthdate?.getDate() ?? "")"
+                    self.userName.text = self.userData?.getFullName()
+                }
+            }
+        })
+    }
     
     private func setup(){
         userName.text = "\(userData?.name ?? "") \(userData?.surname ?? "")"
@@ -51,8 +69,8 @@ class HomeVC: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     @IBAction func settings(_ sender: UIButton){
-        UserDefaults.standard.removeObject(forKey: UserSession.user)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.loginScreen) as? LoginVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.settingScreen) as? SettingVC
+        vc?.user = userData
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

@@ -9,21 +9,27 @@ import UIKit
 
 class SettingVC: UIViewController {
 
+    var user: UserProfile?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonClicked(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
     }
-    */
+    
+    @IBAction func logOutClicked(_ sender: UIControl){
+        UserDefaults.standard.removeObject(forKey: UserSession.user)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.loginScreen) as? LoginVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @IBAction func editProfileCliked(_ sender: UIControl){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.editProfileScreen) as? EditProfileVC
+        vc?.user = user
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
 
 }

@@ -32,6 +32,11 @@ class ChatScreenVC: UIViewController{
         let imagesJson = DataHandler.shared.getJson(key: "\(UserSession.images)\(discussion?.id ?? "")")
         messages = messageList ?? []
         tempImages = imagesJson ?? [:]
+        let numberOfRows = self.discussionTbl.numberOfRows(inSection: 0)
+        if numberOfRows > 0 {
+            let indexPath = IndexPath(row: numberOfRows - 1, section: 0)
+            self.discussionTbl.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
     }
     
     private func setup(){

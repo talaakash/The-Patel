@@ -41,6 +41,8 @@ class ViewControllerKey{
     static let reputedPeopleScreen = "ReputedPeopleVC"
     static let addReputedPeopleScreen = "AddReputedPeopleVC"
     static let reputedPeopleProfileScreen = "ReputedPeopleProfileVC"
+    static let settingScreen = "SettingVC"
+    static let editProfileScreen = "EditProfileVC"
 }
 
 class NibsKey{
