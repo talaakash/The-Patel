@@ -24,13 +24,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Patel" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-Cd-7DF">
-                                <rect key="frame" x="64" y="571" width="265" height="41"/>
+                                <rect key="frame" x="68.666666666666686" y="571" width="133" height="41"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
                                 <color key="textColor" name="Foreground"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Strong Community" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7M-C3-tTv">
-                                <rect key="frame" x="64" y="620" width="265" height="31.666666666666629"/>
+                                <rect key="frame" x="68.666666666666686" y="620" width="226" height="31.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
                                 <color key="textColor" name="Teal"/>
                                 <nil key="highlightedColor"/>
@@ -39,13 +39,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="UniversalBackGround"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DW4-Cd-7DF" secondAttribute="trailing" constant="64" id="70q-LR-IqO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w7M-C3-tTv" secondAttribute="trailing" constant="64" id="BA9-cr-Rvt"/>
+                            <constraint firstItem="DW4-Cd-7DF" firstAttribute="leading" secondItem="iJ6-ww-7OW" secondAttribute="leading" id="DTY-ul-KSn"/>
                             <constraint firstItem="w7M-C3-tTv" firstAttribute="top" secondItem="DW4-Cd-7DF" secondAttribute="bottom" constant="8" id="JlW-e9-mRj"/>
                             <constraint firstItem="iJ6-ww-7OW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PIR-4A-3KV"/>
-                            <constraint firstItem="w7M-C3-tTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="eBz-yg-rmN"/>
-                            <constraint firstItem="DW4-Cd-7DF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="hHb-v3-8g5"/>
                             <constraint firstItem="iJ6-ww-7OW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="iRL-WK-ZnY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DW4-Cd-7DF" secondAttribute="trailing" symbolic="YES" id="mLi-ND-GzJ"/>
+                            <constraint firstItem="w7M-C3-tTv" firstAttribute="leading" secondItem="DW4-Cd-7DF" secondAttribute="leading" id="p7W-gi-fgz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w7M-C3-tTv" secondAttribute="trailing" symbolic="YES" id="pGX-eV-QYl"/>
                             <constraint firstItem="DW4-Cd-7DF" firstAttribute="top" secondItem="iJ6-ww-7OW" secondAttribute="bottom" constant="128" id="ufk-34-ivW"/>
                         </constraints>
                     </view>

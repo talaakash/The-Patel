@@ -25,6 +25,7 @@ class ViewControllerKey{
     static let homeScreen = "HomeVC"
     static let loginScreen = "LoginVC"
     static let signupScreen = "SignupVC"
+    static let forgetPasswordScreen = "ForgetPasswordVC"
     static let userInfoGettingScreen = "UserInfoGettingVC"
     static let profileViewScreen = "ProfileViewVC"
     static let eventScreen = "EventVC"
@@ -110,7 +111,7 @@ class ModelKey{
     static let occupationDescription = "Occupation Description"
     static let currentLocation = "Current Location"
     static let nativeLocation = "Native Location"
-    static let userDateFormat = "yyyy-MM-dd"
+    static let userDateFormat = "dd MMM yyyy"
     
     // Event Model
     static let id = "Event Id"
@@ -168,4 +169,15 @@ class HelperKey{
     static let errorRequire = "Document id is required"
     static let version = "AppVersion"
     static let systemVersion = "CFBundleShortVersionString"
+}
+
+class AlertBox{
+    static let title = "Alert"
+    static let mailSended = "Email send successfully Please reset Password"
+    static let action = "Okay"
+}
+
+class DatesFormates{
+    static let dateFormat = "dd MMM yyyy"
+    static let timeFormat = "h:mm a"
 }

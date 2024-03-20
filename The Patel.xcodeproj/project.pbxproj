@@ -62,6 +62,7 @@
 		38BD7C322B8866CD00F0C3C7 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C312B8866CD00F0C3C7 /* FirebaseAuthManager.swift */; };
 		38BD7C362B8866E700F0C3C7 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C342B8866E700F0C3C7 /* UITextField+Extension.swift */; };
 		38BD7C382B88672200F0C3C7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C372B88672200F0C3C7 /* UIView+Extension.swift */; };
+		38C2DDA52BAAF552005398DA /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C2DDA42BAAF552005398DA /* ForgetPasswordVC.swift */; };
 		38C335A52B9732350002E634 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C335A32B9732350002E634 /* Events.swift */; };
 		38C335A62B9732350002E634 /* Events.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C335A42B9732350002E634 /* Events.xib */; };
 		38C335A82B9746310002E634 /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C335A72B9746310002E634 /* EventDetailsVC.swift */; };
@@ -69,6 +70,7 @@
 		38C7AE112BA2FDDB0033836D /* OthersImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C7AE0F2BA2FDDB0033836D /* OthersImage.xib */; };
 		38C7AE142BA2FF930033836D /* OurImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7AE122BA2FF930033836D /* OurImage.swift */; };
 		38C7AE152BA2FF930033836D /* OurImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C7AE132BA2FF930033836D /* OurImage.xib */; };
+		38C7F8B02BAAC20F00A33EC9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C7F8AF2BAAC20F00A33EC9 /* CustomDatePicker.swift */; };
 		38CCABA42B8C4C9400FE9B0C /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CCABA32B8C4C9400FE9B0C /* FirestoreManager.swift */; };
 		38CCABA62B8C6A9B00FE9B0C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CCABA52B8C6A9B00FE9B0C /* UserProfile.swift */; };
 		38CCABAA2B8C902F00FE9B0C /* UserInfoGettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CCABA92B8C902F00FE9B0C /* UserInfoGettingVC.swift */; };
@@ -150,6 +152,7 @@
 		38BD7C312B8866CD00F0C3C7 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		38BD7C342B8866E700F0C3C7 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		38BD7C372B88672200F0C3C7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		38C2DDA42BAAF552005398DA /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		38C335A32B9732350002E634 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		38C335A42B9732350002E634 /* Events.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Events.xib; sourceTree = "<group>"; };
 		38C335A72B9746310002E634 /* EventDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 		38C7AE0F2BA2FDDB0033836D /* OthersImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OthersImage.xib; sourceTree = "<group>"; };
 		38C7AE122BA2FF930033836D /* OurImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurImage.swift; sourceTree = "<group>"; };
 		38C7AE132BA2FF930033836D /* OurImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OurImage.xib; sourceTree = "<group>"; };
+		38C7F8AF2BAAC20F00A33EC9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		38CCABA32B8C4C9400FE9B0C /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		38CCABA52B8C6A9B00FE9B0C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		38CCABA92B8C902F00FE9B0C /* UserInfoGettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoGettingVC.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				38A34C592B8DF38D003616AF /* CustomAnnotation.swift */,
 				38B806C22B8F09F0007FA141 /* CustomSnackBar.swift */,
 				38AA1FD82B91C2FE006E1194 /* Extentions.swift */,
+				38C7F8AF2BAAC20F00A33EC9 /* CustomDatePicker.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				382E01542BA818E100CC7B38 /* ReputedPeopleProfileVC.swift */,
 				38AC04C72BA9A4550056681C /* SettingVC.swift */,
 				38DF97302BA9AC7900A4C3EB /* EditProfileVC.swift */,
+				38C2DDA42BAAF552005398DA /* ForgetPasswordVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -364,9 +370,9 @@
 				38CCABA32B8C4C9400FE9B0C /* FirestoreManager.swift */,
 				38CCABAB2B8C9FA400FE9B0C /* FirebaseStorageManager.swift */,
 				3845B5092B9073C1003BE303 /* LocationManager.swift */,
-				383D82562B91E64A003F7AED /* ConstantKeys.swift */,
 				38E770342BA860360091853C /* FirebaseRemoteConfig.swift */,
 				38AC04C52BA965250056681C /* DataHandler.swift */,
+				383D82562B91E64A003F7AED /* ConstantKeys.swift */,
 			);
 			path = HelperClass;
 			sourceTree = "<group>";
@@ -571,6 +577,7 @@
 				38CCABA62B8C6A9B00FE9B0C /* UserProfile.swift in Sources */,
 				38F422422BA061E600DD4844 /* Messages.swift in Sources */,
 				38AF25602B99F75C007F0C59 /* ReputedPeople.swift in Sources */,
+				38C2DDA52BAAF552005398DA /* ForgetPasswordVC.swift in Sources */,
 				38AC04C62BA965250056681C /* DataHandler.swift in Sources */,
 				38DB9AB32BA1D47600D5D5EE /* OurMessage.swift in Sources */,
 				38A34C5A2B8DF38D003616AF /* CustomAnnotation.swift in Sources */,
@@ -593,6 +600,7 @@
 				388E116C2B887AAD005380A6 /* LoginVC.swift in Sources */,
 				38B3AB402B95A23B00DD71B0 /* EventVC.swift in Sources */,
 				38CCABAA2B8C902F00FE9B0C /* UserInfoGettingVC.swift in Sources */,
+				38C7F8B02BAAC20F00A33EC9 /* CustomDatePicker.swift in Sources */,
 				388E11692B8875EB005380A6 /* ProgressBar.swift in Sources */,
 				38AA1FD72B91B7D9006E1194 /* Location.swift in Sources */,
 				3877566C2BA08399009994AE /* CreateDiscussionVC.swift in Sources */,

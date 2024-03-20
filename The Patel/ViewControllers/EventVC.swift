@@ -61,7 +61,7 @@ extension EventVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NibsKey.eventIdentifier, for: indexPath) as! Events
         cell.eventName.text = events[indexPath.row].name
-        cell.eventDate.text = String(describing: events[indexPath.row].dateandtime)
+        cell.eventDate.text = "\(events[indexPath.row].dateandtime.getDate()) \(events[indexPath.row].dateandtime.getTime())"
         return cell
     }
     

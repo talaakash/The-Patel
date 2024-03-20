@@ -38,6 +38,11 @@
                             <constraint firstItem="pfd-WL-UKl" firstAttribute="top" secondItem="FMV-zr-Fxa" secondAttribute="top" constant="8" id="xWt-g9-yEw"/>
                             <constraint firstAttribute="bottom" secondItem="pfd-WL-UKl" secondAttribute="bottom" constant="8" id="zAC-Nr-jan"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>

@@ -60,6 +60,11 @@ class LoginVC: UIViewController {
         })
     }
     
+    @IBAction func forgetPassword(_ sender: UIButton){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.forgetPasswordScreen) as? ForgetPasswordVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     @IBAction func createAccount(_ sender: UIButton){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.signupScreen) as? SignupVC
         self.navigationController?.pushViewController(vc!, animated: true)

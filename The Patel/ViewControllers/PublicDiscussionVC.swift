@@ -75,7 +75,7 @@ extension PublicDiscussionVC: UITableViewDelegate, UITableViewDataSource{
         if discussion.lastMessageSender != ""{
             cell.sender.text = "\(discussion.lastMessageSender ?? ""):"
             cell.message.text = discussion.lastMessage ?? ""
-            cell.time.text = discussion.lastMessageTime?.getTime() ?? ""
+            cell.time.text = discussion.lastMessageTime?.timeAgo()
         }
         return cell
     }

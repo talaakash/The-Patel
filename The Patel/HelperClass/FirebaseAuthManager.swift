@@ -31,4 +31,14 @@ class FirebaseAuthManager{
             }
         }
     }
+    
+    func resetPassword(email: String, complationHandler: @escaping (Bool,String?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                complationHandler(false,error.localizedDescription)
+            } else {
+                complationHandler(true,nil)
+            }
+        }
+    }
 }
