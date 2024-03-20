@@ -15,6 +15,8 @@ target 'The Patel' do
   pod 'FirebaseStorage'
   pod 'FirebaseMessaging'
   pod 'FirebaseRemoteConfig'
+  pod 'FirebaseCrashlytics'
+  pod 'FirebaseAnalytics'
   pod 'Kingfisher'
   pod 'SnackBar.swift'
 end

@@ -23,7 +23,6 @@ class SceduleEventVC: UIViewController {
     var selectedGuest : [UserProfile] = []
     var annonation: CustomAnnotation?
     var images: [String] = []
-    var imagesName: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -36,6 +35,7 @@ class SceduleEventVC: UIViewController {
     }
     
     private func setup(){
+        images.removeAll()
         FirestoreManager.shared.getDocuments(collection: .User, complationHandler: { status,error,data in
             if status == true{
                 let usersProfiles = data ?? []
@@ -52,7 +52,7 @@ class SceduleEventVC: UIViewController {
         guestListTbl.register(nib, forCellReuseIdentifier: NibsKey.guestProfileIdentifier)
         let onLongPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleGesture(gestureRecognizer:)))
         venueLocation.addGestureRecognizer(onLongPressGesture)
-        uploadedImages.register(UINib(nibName: NibsKey.eventImage, bundle: nil), forCellWithReuseIdentifier: NibsKey.eventImageIdentifier)
+        uploadedImages.register(UINib(nibName: NibsKey.eventImagesCollection, bundle: nil), forCellWithReuseIdentifier: NibsKey.eventImagesCollectionIdentifier)
     }
     
     
@@ -66,11 +66,10 @@ class SceduleEventVC: UIViewController {
         }
     }
     
-    private func uploadImage(image: UIImage, name: String){
+    private func uploadImage(image: UIImage){
         FirebaseStorageManager.shared.storeData(type: .EventPicture, image: image, complationHandler: { status,error,url in
             if status == true{
                 self.images.append(String(describing: url ?? URL(fileURLWithPath: "")))
-                self.imagesName.append(name)
                 self.uploadedImages.reloadData()
             } else {
                 self.view.makeToast(error)
@@ -120,7 +119,7 @@ class SceduleEventVC: UIViewController {
     
 }
 
-extension SceduleEventVC : UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
+extension SceduleEventVC : UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedGuest.count
@@ -134,8 +133,8 @@ extension SceduleEventVC : UITableViewDelegate, UITableViewDataSource, UIImagePi
         return cell
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage, let name = info[.imageURL] as? URL {
-            uploadImage(image: image,name: name.lastPathComponent)
+        if let image = info[.originalImage] as? UIImage {
+            uploadImage(image: image)
         }
         picker.dismiss(animated: true, completion: nil)
     }
@@ -145,19 +144,17 @@ extension SceduleEventVC : UITableViewDelegate, UITableViewDataSource, UIImagePi
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagesName.count
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NibsKey.eventImageIdentifier, for: indexPath) as! EventImages
-        cell.imageName.text = imagesName[indexPath.row]
-        cell.cancelbtn.addTarget(self, action: #selector(cancelClicked(_:)), for: .touchUpInside)
-        cell.cancelbtn.tag = indexPath.row
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NibsKey.eventImagesCollectionIdentifier, for: indexPath) as! EventImagesCollection
+        cell.eventImage.kf.setImage(with: URL(string: images[indexPath.row]))
         return cell
     }
-    @objc func cancelClicked(_ sender: UIButton){
-        let indexPath = IndexPath(item: sender.tag, section: 0)
-        imagesName.remove(at: indexPath.row)
-        uploadedImages.reloadData()
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
     }
+    
 }

@@ -16,27 +16,44 @@
                 <rect key="frame" x="0.0" y="0.0" width="433" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-JO-bJd">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVK-Ux-tTa">
+                        <rect key="frame" x="8" y="8" width="417" height="84"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-JO-bJd">
+                                <rect key="frame" x="8" y="8" width="80" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="pLl-F5-DZY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-NR-llr">
+                                <rect key="frame" x="96" y="30.333333333333336" width="313" height="23.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" name="Foreground"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="BackGround"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="tCA-mg-6Bg"/>
+                            <constraint firstItem="G0x-JO-bJd" firstAttribute="top" secondItem="BVK-Ux-tTa" secondAttribute="top" constant="8" id="8jx-YH-DJR"/>
+                            <constraint firstAttribute="bottom" secondItem="G0x-JO-bJd" secondAttribute="bottom" constant="8" id="KDl-ot-Jwc"/>
+                            <constraint firstAttribute="trailing" secondItem="gTu-NR-llr" secondAttribute="trailing" constant="8" id="Rtf-Hf-mRy"/>
+                            <constraint firstItem="gTu-NR-llr" firstAttribute="leading" secondItem="G0x-JO-bJd" secondAttribute="trailing" constant="8" id="ZPq-jm-Rir"/>
+                            <constraint firstItem="gTu-NR-llr" firstAttribute="centerY" secondItem="BVK-Ux-tTa" secondAttribute="centerY" id="e0B-Je-Glk"/>
+                            <constraint firstItem="G0x-JO-bJd" firstAttribute="leading" secondItem="BVK-Ux-tTa" secondAttribute="leading" constant="8" id="kZ8-9C-88Z"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-NR-llr">
-                        <rect key="frame" x="108" y="39.666666666666664" width="317" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" name="Foreground"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" name="BackGround"/>
+                <color key="backgroundColor" name="UniversalBackGround"/>
                 <constraints>
-                    <constraint firstItem="gTu-NR-llr" firstAttribute="leading" secondItem="G0x-JO-bJd" secondAttribute="trailing" constant="8" id="AP8-Sh-AAJ"/>
-                    <constraint firstItem="G0x-JO-bJd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NJD-a0-gdh"/>
-                    <constraint firstAttribute="trailing" secondItem="gTu-NR-llr" secondAttribute="trailing" constant="8" id="a8O-JO-zRw"/>
-                    <constraint firstItem="G0x-JO-bJd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="goI-JT-Aua"/>
-                    <constraint firstItem="gTu-NR-llr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hJO-ON-pLj"/>
-                    <constraint firstAttribute="bottom" secondItem="G0x-JO-bJd" secondAttribute="bottom" id="oJL-Ix-Bug"/>
+                    <constraint firstAttribute="bottom" secondItem="BVK-Ux-tTa" secondAttribute="bottom" constant="8" id="6LM-yq-PJU"/>
+                    <constraint firstItem="BVK-Ux-tTa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="L9p-Es-hXN"/>
+                    <constraint firstAttribute="trailing" secondItem="BVK-Ux-tTa" secondAttribute="trailing" constant="8" id="Pdd-Vy-qtQ"/>
+                    <constraint firstItem="BVK-Ux-tTa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eJO-sF-lt5"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -52,6 +69,9 @@
         </namedColor>
         <namedColor name="Foreground">
             <color red="0.85882352941176465" green="0.88627450980392153" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UniversalBackGround">
+            <color red="0.066666666666666666" green="0.17647058823529413" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

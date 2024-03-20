@@ -120,18 +120,4 @@ extension UIView {
             self.layer.cornerRadius = bounds.height / 2
         }
     }
-    
-    @IBInspectable
-    var shadow: CGFloat{
-        get{
-            return 0
-        }
-        set{
-            self.layer.shadowColor = UIColor(named: "Shadow")?.cgColor
-            self.layer.shadowOpacity = 0.7
-            self.layer.shadowOffset = CGSize(width: 0, height: 2)
-            self.layer.shadowRadius = newValue
-            self.layer.masksToBounds = false
-        }
-    }
 }
