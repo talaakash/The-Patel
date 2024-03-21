@@ -59,7 +59,16 @@ class ProfileViewVC: UIViewController {
         occupationTitle.text = userData?.occupation?[ModelKey.occupationTitle]
         occupationDescription.text = userData?.occupation?[ModelKey.occupationDescription]
         
-        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton){

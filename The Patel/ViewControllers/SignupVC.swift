@@ -23,6 +23,19 @@ class SignupVC: UIViewController{
     var user: UserProfile?
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup(){
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func signUp(_ sender: UIButton){

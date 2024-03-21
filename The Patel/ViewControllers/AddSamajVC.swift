@@ -30,6 +30,17 @@ class AddSamajVC: UIViewController {
         imagesCollection.register(UINib(nibName: NibsKey.eventImage, bundle: nil), forCellWithReuseIdentifier: NibsKey.eventImageIdentifier)
         let onLongPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleGesture(gestureRecognizer:)))
         location.addGestureRecognizer(onLongPressGesture)
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @objc func handleGesture(gestureRecognizer: UILongPressGestureRecognizer){

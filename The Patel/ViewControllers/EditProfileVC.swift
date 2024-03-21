@@ -25,6 +25,17 @@ class EditProfileVC: UIViewController {
         name.text = user?.name
         surname.text = user?.surname
         birthDate.date = user?.birthdate ?? Date()
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func backButtonClicked(_ sender: UIButton){

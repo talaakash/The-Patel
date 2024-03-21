@@ -42,6 +42,17 @@ class ReputedPeopleProfileVC: UIViewController {
         location.setRegion(MKCoordinateRegion(center: coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000), animated: true)
         images = profile?.images ?? []
         awards = profile?.awards ?? []
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func navigationClicked(_ sender: UIButton){

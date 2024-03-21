@@ -70,6 +70,17 @@ class PatelSamajsVC: UIViewController {
             self.samajList.reloadData()
         })
         samajList.register(UINib(nibName: NibsKey.patelSamajList, bundle: nil), forCellReuseIdentifier: NibsKey.patelSamajListIdentifier)
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     @IBAction func backButtonClicked(_ sender: UIButton){

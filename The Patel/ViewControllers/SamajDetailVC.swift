@@ -42,6 +42,17 @@ class SamajDetailVC: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { [self]_ in
             changeImage()
         })
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func changeImage(){

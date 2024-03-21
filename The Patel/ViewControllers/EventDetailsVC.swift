@@ -75,6 +75,17 @@ class EventDetailsVC: UIViewController {
             btnRegister.isHidden = true
         }
         getChiefGuestData(guestList: chiefGuest)
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func getChiefGuestData(guestList: [String]){

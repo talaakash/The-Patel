@@ -25,6 +25,17 @@ class EventVC: UIViewController {
         eventsCollection.register(UINib(nibName: NibsKey.event, bundle: nil), forCellWithReuseIdentifier: NibsKey.eventIdentifier)
         let eventList = DataHandler.shared.getData(model: Event.self, key: UserSession.events)
         events = eventList ?? []
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func setup(){

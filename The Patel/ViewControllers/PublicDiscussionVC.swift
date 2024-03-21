@@ -50,6 +50,17 @@ class PublicDiscussionVC: UIViewController {
             DataHandler.shared.setData(model: PublicDiscussion.self, key: UserSession.publicDiscussion, data: self.discussions)
             self.publicDiscussiontbl.reloadData()
         })
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     @IBAction func backButtonClicked(_ sender: UIButton){

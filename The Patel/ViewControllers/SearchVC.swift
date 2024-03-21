@@ -29,6 +29,11 @@ class SearchVC: UIViewController {
     }
     
     private func setup(){
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+        
 //        ProgressBar.shared.show()
         filterCollection.register(UINib(nibName: NibsKey.searchFilter, bundle: nil), forCellWithReuseIdentifier: NibsKey.searchFilterIdentifier)
         filteredDataTable.register(UINib(nibName: NibsKey.commonSearchResult, bundle: nil), forCellReuseIdentifier: NibsKey.commonSearchResultIdentifier)
@@ -65,6 +70,12 @@ class SearchVC: UIViewController {
                 self.view.makeToast(error)
             }
         })
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func searchData(search: String){

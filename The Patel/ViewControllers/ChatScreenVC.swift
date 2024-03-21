@@ -37,6 +37,17 @@ class ChatScreenVC: UIViewController{
             let indexPath = IndexPath(row: numberOfRows - 1, section: 0)
             self.discussionTbl.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func setup(){

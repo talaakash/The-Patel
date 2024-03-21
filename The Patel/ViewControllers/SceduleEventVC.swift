@@ -53,6 +53,17 @@ class SceduleEventVC: UIViewController {
         let onLongPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleGesture(gestureRecognizer:)))
         venueLocation.addGestureRecognizer(onLongPressGesture)
         uploadedImages.register(UINib(nibName: NibsKey.eventImagesCollection, bundle: nil), forCellWithReuseIdentifier: NibsKey.eventImagesCollectionIdentifier)
+        
+        // Back Gesture
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
+        edgePanGesture.edges = .left
+        view.addGestureRecognizer(edgePanGesture)
+    }
+    
+    @objc func handleEdgePanGesture(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .ended {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     
