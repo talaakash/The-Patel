@@ -22,6 +22,7 @@ class UserSession{
 }
 
 class ViewControllerKey{
+    static let navigationController = "NavigationController"
     static let homeScreen = "HomeVC"
     static let loginScreen = "LoginVC"
     static let signupScreen = "SignupVC"

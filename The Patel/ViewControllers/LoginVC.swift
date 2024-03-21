@@ -47,9 +47,11 @@ class LoginVC: UIViewController {
                         }
                         else{
                             let userDetails = UserProfile(json: data ?? [:])
-                            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.homeScreen) as? HomeVC
-                            vc?.userData = userDetails
-                            self.navigationController?.pushViewController(vc!, animated: true)
+                            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.homeScreen) as! HomeVC
+                            vc.userData = userDetails
+                            let navigationController:UINavigationController = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.navigationController) as! UINavigationController
+                            navigationController.viewControllers = [vc]
+                            UIApplication.shared.keyWindow?.rootViewController = navigationController
                         }
                     })
                 }

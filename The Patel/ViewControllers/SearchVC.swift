@@ -157,28 +157,28 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource{
             let user = filteredProfiles?[indexPath.row]
             cell.searchImage.kf.setImage(with: URL(string: user?.profilepicture ?? ""))
             cell.searchTitle.text = user?.getFullName()
-    //        cell.searchLocation.text = locations[indexPath.row].getLocation()
+            cell.searchLocation.text = user?.email
             return cell
         } else if selectedFilter == .filterReputedPeople{
             let cell = tableView.dequeueReusableCell(withIdentifier: NibsKey.commonSearchResultIdentifier, for: indexPath) as! CommonSearchResult
             let user = filteredPeople?[indexPath.row]
             cell.searchImage.kf.setImage(with: URL(string: user?.images.first ?? ""))
             cell.searchTitle.text = user?.name
-    //        cell.searchLocation.text = locations[indexPath.row].getLocation()
+            cell.searchLocation.text = user?.business
             return cell
         }else if selectedFilter == .filterSamaj{
             let cell = tableView.dequeueReusableCell(withIdentifier: NibsKey.commonSearchResultIdentifier, for: indexPath) as! CommonSearchResult
             let user = filteredSamajs?[indexPath.row]
             cell.searchImage.kf.setImage(with: URL(string: user?.images.first ?? ""))
             cell.searchTitle.text = user?.name
-    //        cell.searchLocation.text = locations[indexPath.row].getLocation()
+            cell.searchLocation.text = ""
             return cell
         }  else {
             let cell = tableView.dequeueReusableCell(withIdentifier: NibsKey.commonSearchResultIdentifier, for: indexPath) as! CommonSearchResult
             let user = filteredProfiles?[indexPath.row]
             cell.searchImage.kf.setImage(with: URL(string: user?.profilepicture ?? ""))
             cell.searchTitle.text = user?.getFullName()
-    //        cell.searchLocation.text = locations[indexPath.row].getLocation()
+            cell.searchLocation.text = user?.email
             return cell
         }
     }
