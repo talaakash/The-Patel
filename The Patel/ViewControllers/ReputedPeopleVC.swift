@@ -79,7 +79,7 @@ extension ReputedPeopleVC: UITableViewDelegate, UITableViewDataSource{
         let people = reputedPeople[indexPath.row]
         cell.searchImage.kf.setImage(with: URL(string: people.images.first ?? ""))
         cell.searchTitle.text = people.name
-        cell.searchLocation.text = ""
+        cell.searchLocation.text = people.business
         return cell
     }
     

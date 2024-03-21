@@ -40,6 +40,7 @@
 		38AC04C62BA965250056681C /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC04C52BA965250056681C /* DataHandler.swift */; };
 		38AC04C82BA9A4550056681C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC04C72BA9A4550056681C /* SettingVC.swift */; };
 		38ACEFDF2BA182EE007CF9F0 /* ChatScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACEFDE2BA182EE007CF9F0 /* ChatScreenVC.swift */; };
+		38AE71072BABFB8200D8790F /* GestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE71062BABFB8200D8790F /* GestureHandler.swift */; };
 		38AF255E2B99E973007F0C59 /* Samaj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF255D2B99E973007F0C59 /* Samaj.swift */; };
 		38AF25602B99F75C007F0C59 /* ReputedPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AF255F2B99F75C007F0C59 /* ReputedPeople.swift */; };
 		38B3AB3E2B959F5F00DD71B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B3AB3D2B959F5F00DD71B0 /* Assets.xcassets */; };
@@ -128,6 +129,7 @@
 		38AC04C52BA965250056681C /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		38AC04C72BA9A4550056681C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		38ACEFDE2BA182EE007CF9F0 /* ChatScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenVC.swift; sourceTree = "<group>"; };
+		38AE71062BABFB8200D8790F /* GestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureHandler.swift; sourceTree = "<group>"; };
 		38AF255D2B99E973007F0C59 /* Samaj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samaj.swift; sourceTree = "<group>"; };
 		38AF255F2B99F75C007F0C59 /* ReputedPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReputedPeople.swift; sourceTree = "<group>"; };
 		38B3AB3D2B959F5F00DD71B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				38E770342BA860360091853C /* FirebaseRemoteConfig.swift */,
 				38AC04C52BA965250056681C /* DataHandler.swift */,
 				383D82562B91E64A003F7AED /* ConstantKeys.swift */,
+				38AE71062BABFB8200D8790F /* GestureHandler.swift */,
 			);
 			path = HelperClass;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				38CCABAA2B8C902F00FE9B0C /* UserInfoGettingVC.swift in Sources */,
 				38C7F8B02BAAC20F00A33EC9 /* CustomDatePicker.swift in Sources */,
 				388E11692B8875EB005380A6 /* ProgressBar.swift in Sources */,
+				38AE71072BABFB8200D8790F /* GestureHandler.swift in Sources */,
 				38AA1FD72B91B7D9006E1194 /* Location.swift in Sources */,
 				3877566C2BA08399009994AE /* CreateDiscussionVC.swift in Sources */,
 				38C335A82B9746310002E634 /* EventDetailsVC.swift in Sources */,

@@ -57,6 +57,7 @@ class SceduleEventVC: UIViewController {
         // Back Gesture
         let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePanGesture(_:)))
         edgePanGesture.edges = .left
+        
         view.addGestureRecognizer(edgePanGesture)
     }
     

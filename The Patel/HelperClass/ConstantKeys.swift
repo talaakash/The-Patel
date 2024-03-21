@@ -174,6 +174,10 @@ class HelperKey{
 class AlertBox{
     static let title = "Alert"
     static let mailSended = "Email send successfully Please reset Password"
+    static let logoutTiltle = "Conformation"
+    static let logoutMessage = "Are you Sure You Want LogOut"
+    static let yes = "Yes"
+    static let no = "No"
     static let action = "Okay"
 }
 

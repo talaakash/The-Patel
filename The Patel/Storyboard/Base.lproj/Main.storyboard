@@ -502,7 +502,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLw-8H-8y8">
                                         <rect key="frame" x="16" y="144" width="361" height="112"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Sd-Npg">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Sd-Npg">
                                                 <rect key="frame" x="8" y="16" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="ij8-kr-CrP"/>
@@ -1678,7 +1678,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5G-nI-hHh" userLabel="Event" customClass="UIControl">
                                                 <rect key="frame" x="16" y="330.66666666666669" width="361" height="116"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Event" translatesAutoresizingMaskIntoConstraints="NO" id="Wmo-Rd-U5p">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Event" translatesAutoresizingMaskIntoConstraints="NO" id="Wmo-Rd-U5p">
                                                         <rect key="frame" x="8" y="8" width="150" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="150" id="3Ah-A0-FEw"/>
@@ -1730,7 +1730,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXd-3Y-QOC" userLabel="Public Discussion" customClass="UIControl">
                                                 <rect key="frame" x="16" y="462.66666666666663" width="361" height="116"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discussion" translatesAutoresizingMaskIntoConstraints="NO" id="Kg2-4A-Vmh">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discussion" translatesAutoresizingMaskIntoConstraints="NO" id="Kg2-4A-Vmh">
                                                         <rect key="frame" x="8" y="8" width="150" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="eAI-5O-dTK"/>
@@ -1782,7 +1782,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xB0-K4-ngz" userLabel="Patel Samajs" customClass="UIControl">
                                                 <rect key="frame" x="16" y="594.66666666666663" width="361" height="116"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="IoN-QH-LIv">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="IoN-QH-LIv">
                                                         <rect key="frame" x="8" y="8" width="150" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="TjJ-dF-ejN"/>
@@ -1834,7 +1834,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwO-Z8-T1e" userLabel="Reputed People" customClass="UIControl">
                                                 <rect key="frame" x="16" y="726.66666666666663" width="361" height="143"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReputedPeople" translatesAutoresizingMaskIntoConstraints="NO" id="9nY-IQ-RQ0">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReputedPeople" translatesAutoresizingMaskIntoConstraints="NO" id="9nY-IQ-RQ0">
                                                         <rect key="frame" x="8" y="8" width="150" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="150" id="V1z-kx-qT0"/>
@@ -2480,7 +2480,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-PW-AN2" customClass="UIControl">
                                                 <rect key="frame" x="146.66666666666666" y="112" width="100" height="100"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jci-BS-JOW">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jci-BS-JOW">
                                                         <rect key="frame" x="0.0" y="1.6666666666666643" width="100" height="97"/>
                                                         <color key="tintColor" name="Foreground"/>
                                                         <userDefinedRuntimeAttributes>
@@ -2608,7 +2608,7 @@
                                                     <action selector="backButtonClicked:" destination="NQt-xe-eNk" eventType="touchUpInside" id="qbx-l0-tCZ"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MaU-ZP-OQB">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MaU-ZP-OQB">
                                                 <rect key="frame" x="56" y="8" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="E3D-KB-Vz2"/>
@@ -3596,7 +3596,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBT-ht-Ulv" customClass="UIControl">
                                                 <rect key="frame" x="141.66666666666666" y="88" width="110" height="110"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="4qL-Lu-NgK">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="4qL-Lu-NgK">
                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -3803,11 +3803,19 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DN-wB-MvX">
-                                                                <rect key="frame" x="210.66666666666663" y="136" width="150.33333333333337" height="34.666666666666657"/>
+                                                                <rect key="frame" x="218.66666666666663" y="136" width="150.33333333333337" height="34.666666666666657"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Forget Password?">
-                                                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <attributedString key="attributedTitle">
+                                                                        <fragment content="Forget Password?">
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="15" name="Avenir-Heavy"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                <integer key="NSUnderline" value="1"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="forgetPassword:" destination="ecf-Wc-I9D" eventType="touchUpInside" id="eag-dt-o12"/>
@@ -3841,7 +3849,7 @@
                                                             <constraint firstItem="jr6-bn-6A2" firstAttribute="leading" secondItem="fI3-gy-Chi" secondAttribute="leading" constant="16" id="PjB-4A-RvL"/>
                                                             <constraint firstItem="7zh-dg-dgv" firstAttribute="top" secondItem="fI3-gy-Chi" secondAttribute="top" constant="32" id="QIh-bJ-MWE"/>
                                                             <constraint firstItem="lKL-FP-DWk" firstAttribute="top" secondItem="8DN-wB-MvX" secondAttribute="bottom" constant="16" id="RJc-nS-rwe"/>
-                                                            <constraint firstAttribute="trailing" secondItem="8DN-wB-MvX" secondAttribute="trailing" constant="16" id="TER-Dl-4hG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="8DN-wB-MvX" secondAttribute="trailing" constant="8" id="TER-Dl-4hG"/>
                                                             <constraint firstAttribute="trailing" secondItem="7zh-dg-dgv" secondAttribute="trailing" constant="16" id="bMY-5f-sDt"/>
                                                             <constraint firstItem="7zh-dg-dgv" firstAttribute="leading" secondItem="fI3-gy-Chi" secondAttribute="leading" constant="16" id="eLV-Cb-50Q"/>
                                                             <constraint firstItem="jr6-bn-6A2" firstAttribute="top" secondItem="7zh-dg-dgv" secondAttribute="bottom" constant="16" id="hXP-Ge-1xb"/>
