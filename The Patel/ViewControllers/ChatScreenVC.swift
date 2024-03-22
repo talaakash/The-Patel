@@ -219,6 +219,15 @@ extension ChatScreenVC: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let message = messages[indexPath.row]
+        if message.isMessage == false{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.imagePreviewScreen) as? ImagePreviewVC
+            vc?.previewImagestring = message.message
+            self.navigationController?.pushViewController(vc!, animated: false)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let message = messages[indexPath.row]
         if message.isMessage == true{

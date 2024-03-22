@@ -1177,6 +1177,7 @@
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="T81-Bz-e50">
                                                                 <rect key="frame" x="0.0" y="-0.3333333333333357" width="30" height="29.333333333333336"/>
+                                                                <color key="tintColor" name="Foreground"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="Ehu-Bp-IHd"/>
                                                                     <constraint firstAttribute="height" constant="30" id="nN1-gn-hJh"/>
@@ -1190,7 +1191,7 @@
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-9H-e7z">
                                                                 <rect key="frame" x="0.0" y="36.333333333333314" width="30" height="28.333333333333329"/>
-                                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                                <color key="tintColor" name="Foreground"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="8ey-Nk-uoY"/>
                                                                     <constraint firstAttribute="height" constant="30" id="mkU-KW-IPW"/>
@@ -1516,7 +1517,7 @@
                                 <rect key="frame" x="-2" y="69" width="393" height="749"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-jL-NOp" userLabel="ScrollableView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="901.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="882.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgJ-YQ-ZDW" userLabel="Header">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="38"/>
@@ -1832,7 +1833,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwO-Z8-T1e" userLabel="Reputed People" customClass="UIControl">
-                                                <rect key="frame" x="16" y="726.66666666666663" width="361" height="143"/>
+                                                <rect key="frame" x="16" y="726.66666666666663" width="361" height="124"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReputedPeople" translatesAutoresizingMaskIntoConstraints="NO" id="9nY-IQ-RQ0">
                                                         <rect key="frame" x="8" y="8" width="150" height="100"/>
@@ -1852,8 +1853,8 @@
                                                         <color key="textColor" name="Foreground"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputed people are individuals recognized for their status, achievements, or reputation within a specific field." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQN-9F-cCZ">
-                                                        <rect key="frame" x="166" y="39.333333333333378" width="187" height="95.666666666666686"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputed people are individuals recognized for their status, achievements or within a specific field." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQN-9F-cCZ">
+                                                        <rect key="frame" x="166" y="39.333333333333378" width="187" height="76.666666666666686"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                         <color key="textColor" name="Foreground"/>
                                                         <nil key="highlightedColor"/>
@@ -2580,6 +2581,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msk-QZ-aSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5005" y="1400"/>
+        </scene>
+        <!--Image PreviewVC-->
+        <scene sceneID="PJl-wH-ZUj">
+            <objects>
+                <viewController storyboardIdentifier="ImagePreviewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vJx-yB-Phq" customClass="ImagePreviewVC" customModule="The_Patel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dxW-fS-l7J">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-jb-3Yf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83Q-vY-1eB">
+                                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="ERd-eK-L8C"/>
+                                            <constraint firstAttribute="height" constant="40" id="hPO-i5-dYv"/>
+                                        </constraints>
+                                        <color key="tintColor" name="Foreground"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="vJx-yB-Phq" eventType="touchUpInside" id="dUm-cP-lwX"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DtX-Lu-f2q">
+                                        <rect key="frame" x="16" y="88" width="361" height="639"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="83Q-vY-1eB" secondAttribute="trailing" constant="20" symbolic="YES" id="37Q-01-ITb"/>
+                                    <constraint firstItem="83Q-vY-1eB" firstAttribute="leading" secondItem="4bh-jb-3Yf" secondAttribute="leading" constant="16" id="4xc-s9-WlC"/>
+                                    <constraint firstAttribute="trailing" secondItem="DtX-Lu-f2q" secondAttribute="trailing" constant="16" id="6OK-Sa-9Fx"/>
+                                    <constraint firstItem="DtX-Lu-f2q" firstAttribute="top" secondItem="83Q-vY-1eB" secondAttribute="bottom" constant="32" id="Qet-k0-RAQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="DtX-Lu-f2q" secondAttribute="bottom" constant="32" id="XmW-XH-Pdu"/>
+                                    <constraint firstItem="DtX-Lu-f2q" firstAttribute="leading" secondItem="4bh-jb-3Yf" secondAttribute="leading" constant="16" id="aoY-Gz-Nxk"/>
+                                    <constraint firstItem="83Q-vY-1eB" firstAttribute="top" secondItem="4bh-jb-3Yf" secondAttribute="top" constant="16" id="lCy-Xp-2HE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VwJ-gB-10t"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.21647350993377484" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4bh-jb-3Yf" firstAttribute="trailing" secondItem="VwJ-gB-10t" secondAttribute="trailing" id="6iF-zJ-t4p"/>
+                            <constraint firstItem="VwJ-gB-10t" firstAttribute="bottom" secondItem="4bh-jb-3Yf" secondAttribute="bottom" id="DuN-NE-NMh"/>
+                            <constraint firstItem="4bh-jb-3Yf" firstAttribute="leading" secondItem="VwJ-gB-10t" secondAttribute="leading" id="Gfu-7m-oMB"/>
+                            <constraint firstItem="4bh-jb-3Yf" firstAttribute="top" secondItem="VwJ-gB-10t" secondAttribute="top" id="tWy-Ws-8dN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="DtX-Lu-f2q" id="pTp-O3-Q3a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dT-aS-n5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5834.3511450381675" y="1400"/>
         </scene>
         <!--Chat ScreenVC-->
         <scene sceneID="u6U-WD-JhW">
@@ -4799,9 +4856,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
