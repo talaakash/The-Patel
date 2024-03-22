@@ -48,5 +48,23 @@ class SettingVC: UIViewController {
         vc?.user = user
         self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    @IBAction func privacyPolicy(_ sender: UIControl){
+        if let url = URL(string: "https://the-patel-privacy.netlify.app/") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func termsAndCondition(_ sender: UIControl){
+        if let url = URL(string: "https://thepateltermsandcondition.netlify.app/") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func aboutUs(_ sender: UIControl){
+        if let url = URL(string: "https://thepatelaboutus.netlify.app/") {
+            UIApplication.shared.open(url)
+        }
+    }
 
 }
