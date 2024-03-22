@@ -50,19 +50,19 @@ class SettingVC: UIViewController {
     }
     
     @IBAction func privacyPolicy(_ sender: UIControl){
-        if let url = URL(string: "https://the-patel-privacy.netlify.app/") {
+        if let url = URL(string: FirebaseRemoteConfig.shared.getLink(key: HelperKey.privacyPolicy)) {
             UIApplication.shared.open(url)
         }
     }
     
     @IBAction func termsAndCondition(_ sender: UIControl){
-        if let url = URL(string: "https://thepateltermsandcondition.netlify.app/") {
+        if let url = URL(string: FirebaseRemoteConfig.shared.getLink(key: HelperKey.termsAndCondition)) {
             UIApplication.shared.open(url)
         }
     }
     
     @IBAction func aboutUs(_ sender: UIControl){
-        if let url = URL(string: "https://thepatelaboutus.netlify.app/") {
+        if let url = URL(string: FirebaseRemoteConfig.shared.getLink(key: HelperKey.aboutUs)) {
             UIApplication.shared.open(url)
         }
     }

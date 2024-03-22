@@ -12,14 +12,17 @@ class FirebaseRemoteConfig{
     static let shared = FirebaseRemoteConfig()
     let remoteConfig = RemoteConfig.remoteConfig()
     let remoteConfigSettings = RemoteConfigSettings()
-    private init(){ }
+    private init(){
+        let remoteConfigSettings = RemoteConfigSettings()
+        remoteConfigSettings.minimumFetchInterval = 36
+        remoteConfig.configSettings = remoteConfigSettings
+    }
     
     func activeRemoteConfig(){
-        remoteConfigSettings.minimumFetchInterval = 0
         remoteConfig.fetch { (status, error) in
             if status == .success {
                 self.remoteConfig.activate { (changed, error) in
-            
+                    
                 }
             }
         }
@@ -31,5 +34,11 @@ class FirebaseRemoteConfig{
             return true
         }
         return false
+    }
+    
+    func getLink(key: String) -> String{
+        activeRemoteConfig()
+        let link = remoteConfig[key].stringValue
+        return link ?? ""
     }
 }

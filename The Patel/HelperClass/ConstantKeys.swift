@@ -170,6 +170,9 @@ class HelperKey{
     static let errorRequire = "Document id is required"
     static let version = "AppVersion"
     static let systemVersion = "CFBundleShortVersionString"
+    static let termsAndCondition = "TermsAndCondition"
+    static let privacyPolicy = "PrivacyPolicy"
+    static let aboutUs = "AboutUs"
 }
 
 class AlertBox{
