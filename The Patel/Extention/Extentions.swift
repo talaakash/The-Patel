@@ -69,15 +69,28 @@ extension Date{
 extension UIImageView{
     func enableZoom() {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(startZooming(_:)))
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(_:)))
         isUserInteractionEnabled = true
         addGestureRecognizer(pinchGesture)
-      }
-
-      @objc
-      private func startZooming(_ sender: UIPinchGestureRecognizer) {
+        addGestureRecognizer(doubleTapGesture)
+        pinchGesture.require(toFail: doubleTapGesture)
+    }
+    
+    @objc
+    private func startZooming(_ sender: UIPinchGestureRecognizer) {
         let scaleResult = sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale)
         guard let scale = scaleResult, scale.a > 1, scale.d > 1 else { return }
         sender.view?.transform = scale
         sender.scale = 1
-      }
+    }
+    
+    @objc private func handleDoubleTap(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let scale: CGFloat = 2.0
+            let newTransform = transform.scaledBy(x: scale, y: scale)
+            UIView.animate(withDuration: 0.3) {
+                self.transform = newTransform
+            }
+        }
+    }
 }
