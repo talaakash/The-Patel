@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SafariServices
 
 class SettingVC: UIViewController {
-
+    
     var user: UserProfile?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,21 +51,39 @@ class SettingVC: UIViewController {
     }
     
     @IBAction func privacyPolicy(_ sender: UIControl){
+        
+       
+        
         if let url = URL(string: FirebaseRemoteConfig.shared.getLink(key: HelperKey.privacyPolicy)) {
-            UIApplication.shared.open(url)
+//            UIApplication.shared.open(url)
+            
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+            
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.webviewScreen) as? WebViewingVC
+//            vc?.url = url
+//            self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
     
     @IBAction func termsAndCondition(_ sender: UIControl){
         if let url = URL(string: FirebaseRemoteConfig.shared.getLink(key: HelperKey.termsAndCondition)) {
-            UIApplication.shared.open(url)
+//            UIApplication.shared.open(url)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.webviewScreen) as? WebViewingVC
+            vc?.url = url
+            self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
     
     @IBAction func aboutUs(_ sender: UIControl){
         if let url = URL(string: FirebaseRemoteConfig.shared.getLink(key: HelperKey.aboutUs)) {
-            UIApplication.shared.open(url)
+//            UIApplication.shared.open(url)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerKey.webviewScreen) as? WebViewingVC
+            vc?.url = url
+            self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
-
 }

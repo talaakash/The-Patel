@@ -19,6 +19,7 @@
 		38613C922B9ED2DC00627BF9 /* PatelSamajsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38613C912B9ED2DC00627BF9 /* PatelSamajsVC.swift */; };
 		38613C962B9ED68100627BF9 /* SamajsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38613C942B9ED68100627BF9 /* SamajsList.swift */; };
 		38613C972B9ED68100627BF9 /* SamajsList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38613C952B9ED68100627BF9 /* SamajsList.xib */; };
+		3862312E2BAD9B050092523E /* WebViewingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862312D2BAD9B050092523E /* WebViewingVC.swift */; };
 		3863F25C2B95F827007FAE15 /* PopUpGuestSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3863F25B2B95F827007FAE15 /* PopUpGuestSelectorVC.swift */; };
 		3863F2602B960395007FAE15 /* GuestProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3863F25E2B960395007FAE15 /* GuestProfile.swift */; };
 		3863F2612B960395007FAE15 /* GuestProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3863F25F2B960395007FAE15 /* GuestProfile.xib */; };
@@ -108,6 +109,7 @@
 		38613C912B9ED2DC00627BF9 /* PatelSamajsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatelSamajsVC.swift; sourceTree = "<group>"; };
 		38613C942B9ED68100627BF9 /* SamajsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamajsList.swift; sourceTree = "<group>"; };
 		38613C952B9ED68100627BF9 /* SamajsList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SamajsList.xib; sourceTree = "<group>"; };
+		3862312D2BAD9B050092523E /* WebViewingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewingVC.swift; sourceTree = "<group>"; };
 		3863F25B2B95F827007FAE15 /* PopUpGuestSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpGuestSelectorVC.swift; sourceTree = "<group>"; };
 		3863F25E2B960395007FAE15 /* GuestProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestProfile.swift; sourceTree = "<group>"; };
 		3863F25F2B960395007FAE15 /* GuestProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestProfile.xib; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				38DF97302BA9AC7900A4C3EB /* EditProfileVC.swift */,
 				38C2DDA42BAAF552005398DA /* ForgetPasswordVC.swift */,
 				38694AB82BAD6FD3002B53E1 /* ImagePreviewVC.swift */,
+				3862312D2BAD9B050092523E /* WebViewingVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				38BD7C162B88609100F0C3C7 /* UserCheckingVC.swift in Sources */,
 				38F422402BA0601D00DD4844 /* PublicDiscussion.swift in Sources */,
 				38C7AE102BA2FDDB0033836D /* OthersImage.swift in Sources */,
+				3862312E2BAD9B050092523E /* WebViewingVC.swift in Sources */,
 				38CCABA42B8C4C9400FE9B0C /* FirestoreManager.swift in Sources */,
 				38BD7C122B88609100F0C3C7 /* AppDelegate.swift in Sources */,
 				38F422462BA06CEF00DD4844 /* PublicDiscussions.swift in Sources */,

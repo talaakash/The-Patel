@@ -3756,6 +3756,56 @@
             </objects>
             <point key="canvasLocation" x="1702" y="696"/>
         </scene>
+        <!--Web ViewingVC-->
+        <scene sceneID="sqw-cU-edN">
+            <objects>
+                <viewController storyboardIdentifier="WebViewingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9cj-oT-YjF" customClass="WebViewingVC" customModule="The_Patel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s8g-Bi-re5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" findInteractionEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfB-Th-cmr">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" name="UniversalBackGround"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMK-sQ-4kO">
+                                <rect key="frame" x="16" y="75" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HF7-2g-Bgq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="nWQ-GM-l07"/>
+                                </constraints>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="9cj-oT-YjF" eventType="touchUpInside" id="Qiy-lL-m6U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b9q-7R-wMu"/>
+                        <color key="backgroundColor" name="UniversalBackGround"/>
+                        <constraints>
+                            <constraint firstItem="bMK-sQ-4kO" firstAttribute="top" secondItem="b9q-7R-wMu" secondAttribute="top" constant="16" id="3Ba-dm-hQt"/>
+                            <constraint firstItem="b9q-7R-wMu" firstAttribute="bottom" secondItem="qfB-Th-cmr" secondAttribute="bottom" id="GPl-Nj-O0z"/>
+                            <constraint firstItem="b9q-7R-wMu" firstAttribute="trailing" secondItem="qfB-Th-cmr" secondAttribute="trailing" id="MAq-uB-IUT"/>
+                            <constraint firstItem="bMK-sQ-4kO" firstAttribute="leading" secondItem="b9q-7R-wMu" secondAttribute="leading" constant="16" id="cPT-DH-Kh9"/>
+                            <constraint firstItem="qfB-Th-cmr" firstAttribute="top" secondItem="b9q-7R-wMu" secondAttribute="top" id="nUm-cP-Lik"/>
+                            <constraint firstItem="qfB-Th-cmr" firstAttribute="leading" secondItem="b9q-7R-wMu" secondAttribute="leading" id="tP0-hS-jmO"/>
+                            <constraint firstItem="b9q-7R-wMu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bMK-sQ-4kO" secondAttribute="trailing" symbolic="YES" id="zHp-9C-Tre"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="qfB-Th-cmr" id="c9o-KW-z0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7L-sI-gsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="696"/>
+        </scene>
         <!--Edit ProfileVC-->
         <scene sceneID="1d7-SH-j8u">
             <objects>
@@ -3954,7 +4004,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Odx-EM-lIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571.7557251908397" y="695.77464788732402"/>
+            <point key="canvasLocation" x="3352" y="4"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="cP6-hU-WZA">

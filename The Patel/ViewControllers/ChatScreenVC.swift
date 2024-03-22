@@ -251,7 +251,7 @@ extension ChatScreenVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension ChatScreenVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ChatScreenVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[.originalImage] as? UIImage {
             selectedImage(image: pickedImage)
