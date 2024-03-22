@@ -34,8 +34,8 @@ class ImagePreviewVC: UIViewController {
         }
     }
     
-    @IBAction func closeClicked(_ sender: UIButton){
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func closeButtonClicked(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: false)
     }
 
 }

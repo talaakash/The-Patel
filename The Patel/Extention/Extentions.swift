@@ -70,14 +70,15 @@ extension UIImageView{
     func enableZoom() {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(startZooming(_:)))
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2
         isUserInteractionEnabled = true
         addGestureRecognizer(pinchGesture)
         addGestureRecognizer(doubleTapGesture)
         pinchGesture.require(toFail: doubleTapGesture)
     }
     
-    @objc
-    private func startZooming(_ sender: UIPinchGestureRecognizer) {
+    @objc private func startZooming(_ sender: UIPinchGestureRecognizer) {
+        guard let view = sender.view else { return }
         let scaleResult = sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale)
         guard let scale = scaleResult, scale.a > 1, scale.d > 1 else { return }
         sender.view?.transform = scale
@@ -85,6 +86,7 @@ extension UIImageView{
     }
     
     @objc private func handleDoubleTap(_ sender: UITapGestureRecognizer) {
+        guard let view = sender.view else { return }
         if sender.state == .ended {
             let scale: CGFloat = 2.0
             let newTransform = transform.scaledBy(x: scale, y: scale)

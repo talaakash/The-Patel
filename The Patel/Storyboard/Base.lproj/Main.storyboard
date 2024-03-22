@@ -2594,26 +2594,30 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DtX-Lu-f2q">
-                                        <rect key="frame" x="16" y="82.333333333333314" width="361" height="644.66666666666674"/>
+                                        <rect key="frame" x="16" y="88" width="361" height="639"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83Q-vY-1eB">
-                                        <rect key="frame" x="330.66666666666669" y="16.000000000000004" width="46.333333333333314" height="34.333333333333343"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQS-98-CFQ">
+                                        <rect key="frame" x="330.66666666666669" y="16" width="46.333333333333314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="d5x-6B-gCR"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="dsy-a5-ZHY"/>
+                                        </constraints>
                                         <color key="tintColor" name="Foreground"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
                                         <connections>
-                                            <action selector="closeClicked:" destination="vJx-yB-Phq" eventType="touchUpInside" id="4hz-Lo-YrG"/>
+                                            <action selector="closeButtonClicked:" destination="vJx-yB-Phq" eventType="touchUpInside" id="YTe-US-ltF"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="DtX-Lu-f2q" secondAttribute="trailing" constant="16" id="6OK-Sa-9Fx"/>
-                                    <constraint firstItem="DtX-Lu-f2q" firstAttribute="top" secondItem="83Q-vY-1eB" secondAttribute="bottom" constant="32" id="8Q0-5J-nfv"/>
-                                    <constraint firstAttribute="trailing" secondItem="83Q-vY-1eB" secondAttribute="trailing" constant="16" id="Nwo-y6-zZR"/>
-                                    <constraint firstItem="83Q-vY-1eB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4bh-jb-3Yf" secondAttribute="leading" constant="20" symbolic="YES" id="QmL-cE-FEi"/>
                                     <constraint firstAttribute="bottom" secondItem="DtX-Lu-f2q" secondAttribute="bottom" constant="32" id="XmW-XH-Pdu"/>
                                     <constraint firstItem="DtX-Lu-f2q" firstAttribute="leading" secondItem="4bh-jb-3Yf" secondAttribute="leading" constant="16" id="aoY-Gz-Nxk"/>
-                                    <constraint firstItem="83Q-vY-1eB" firstAttribute="top" secondItem="4bh-jb-3Yf" secondAttribute="top" constant="16" id="igg-2R-o3q"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQS-98-CFQ" secondAttribute="trailing" constant="16" id="dJx-as-5dg"/>
+                                    <constraint firstItem="KQS-98-CFQ" firstAttribute="top" secondItem="4bh-jb-3Yf" secondAttribute="top" constant="16" id="lQb-9W-5V4"/>
+                                    <constraint firstItem="KQS-98-CFQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4bh-jb-3Yf" secondAttribute="leading" constant="20" symbolic="YES" id="nst-hZ-Pcv"/>
+                                    <constraint firstItem="DtX-Lu-f2q" firstAttribute="top" secondItem="KQS-98-CFQ" secondAttribute="bottom" constant="32" id="vHJ-Uo-Jvh"/>
                                 </constraints>
                             </view>
                         </subviews>
